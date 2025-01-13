@@ -6,19 +6,26 @@ wc is a command-line application that reads a value from the standard input (STD
 - Count by lines
 - Count by bytes
 
-## Usage
-1. Compile the application
-```bash
-
-  git git@github.com:hayohtee/wc.git
+## Build from source
+1. Clone the repository
+  ```bash
+  git clone git@github.com:hayohtee/wc.git
+  ```
+2. Change into the project directory
+  ```bash
   cd wc
-  go build
-
+  ```
+3. Compile
+```bash
+go build ./...
 ```
-2. Run wc command
+## Usage
+Simply use pipe operator to sends the output of other process to wc\
+Here is an example of using echo command.
 ```bash
   echo "This is my first command-line app" | ./wc
 ```
+
 ## Options
 wc contains flags for performing different counts. By defaults, it count by words.
 ```bash
